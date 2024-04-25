@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /css/
+Disallow: /resources/
+
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://parmag3dd0n.com/sitemap.xml
