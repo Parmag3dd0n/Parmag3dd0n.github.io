@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'DOS';
+	font-family: 'Perfect DOS VGA 437 Win';
 	src: url('/fonts/dos.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
@@ -7,8 +7,8 @@
 
 :root {
     --width: 820px;
-    --font-main: 'DOS', sans-serif;
-    --font-secondary: 'DOS', sans-serif;
+    --font-main: 'Perfect DOS VGA 437 Win', sans-serif;
+    --font-secondary: 'Perfect DOS VGA 437 Win', sans-serif;
     --font-scale: 1em;
     --background-color: #000000;
     --heading-color: #ffffff;
@@ -231,6 +231,12 @@ td {
 
 footer span:not([class]):not([id]):not([property]) {
     display: none;
+}
+
+a:not([id]):not([property]) {
+    padding-top: 3px;
+    padding-right: 1px;
+    padding-left: 1px;
 }
 
 a:not([class]):not([id]):not([property]):before {
