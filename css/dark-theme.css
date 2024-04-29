@@ -244,7 +244,7 @@ ul:not([class]):not([id]):not([property]) {
 ul:not([class]):not([id]):not([property]) li {
     display: flex;
     align-items: center;
-    white-space: pre-wrap;
+    white-space: normal;
 }
 
 ul:not([class]):not([id]):not([property]) li::before {
