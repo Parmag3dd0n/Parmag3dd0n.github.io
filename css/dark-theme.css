@@ -1,8 +1,8 @@
 @font-face {
-	font-family: 'Perfect DOS VGA 437 Win';
-	src: url('/fonts/dos.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Perfect DOS VGA 437 Win';
+    src: url('/fonts/dos.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root {
@@ -53,16 +53,18 @@ body::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: repeating-linear-gradient(0deg,
-            rgba(0, 0, 0, 0.1),
-            rgba(0, 0, 0, 0.1) 1px,
-            transparent 1px,
-            transparent 2px);
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
     pointer-events: none;
 }
 
 .centered {
-	text-align: center;
+    text-align: center;
 }
 
 h1,
@@ -76,15 +78,15 @@ h6 {
 }
 
 .color-white {
-	color: var(--text-color);
+    color: var(--text-color);
 }
 
 .mt-2 {
-	margin-top: 1.5em;
+    margin-top: 1.5em;
 }
 
 .mb-2 {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 a {
@@ -96,7 +98,7 @@ a {
 }
 
 a.disabled {
-	border-bottom: none;
+    border-bottom: none;
 }
 
 a:not(.disabled):hover {
@@ -117,12 +119,42 @@ nav a {
     font-size: large;
 }
 
+a:not([id]):not([property]) {
+    padding-top: 4px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+a:not([class]):not([id]):not([property]):before {
+    content: "\00a0";
+}
+
+a:not([class]):not([id]):not([property]):after {
+    content: "\00a0";
+}
+
+a:not([class]):not([id]):not([property]):hover:before {
+    content: ">";
+}
+
+a:not([class]):not([id]):not([property]):hover:after {
+    content: "<";
+}
+
+nav a:not([class]):not([id]):not([property]):hover:before {
+    content: "[";
+}
+
+nav a:not([class]):not([id]):not([property]):hover:after {
+    content: "]";
+}
+
 .selected:before {
-	content: '>';
+    content: '>';
 }
 
 .selected:after {
-	content: '<';
+    content: '<';
 }
 
 strong,
@@ -140,7 +172,7 @@ main {
 }
 
 .table-container {
-	overflow-x: auto;
+    overflow-x: auto;
 }
 
 table {
@@ -148,7 +180,7 @@ table {
 }
 
 thead {
-	color: var(--main-color);
+    color: var(--main-color);
 }
 
 hr {
@@ -204,19 +236,20 @@ footer {
     overflow-x: auto;
 }
 
-ul {
-	list-style-type: none;
-	padding-left: 20px;
+ul:not([class]):not([id]):not([property]) {
+    list-style-type: none;
+    padding-left: 20px;
 }
 
-ul li {
-	display: flex;
-	align-items: center;
+ul:not([class]):not([id]):not([property]) li {
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
 }
 
-ul li::before {
-	content: '>_';
-	padding-right: 8px;
+ul:not([class]):not([id]):not([property]) li::before {
+    content: '>_';
+    padding-right: 8px;
 }
 
 /* blog post list */
@@ -257,34 +290,4 @@ td {
 
 footer span:not([class]):not([id]):not([property]) {
     display: none;
-}
-
-a:not([id]):not([property]) {
-    padding-top: 4px;
-    padding-right: 1px;
-    padding-left: 1px;
-}
-
-a:not([class]):not([id]):not([property]):before {
-    content: "\00a0";
-}
-
-a:not([class]):not([id]):not([property]):after {
-    content: "\00a0";
-}
-
-a:not([class]):not([id]):not([property]):hover:before {
-    content: ">";
-}
-
-a:not([class]):not([id]):not([property]):hover:after {
-    content: "<";
-}
-
-nav a:not([class]):not([id]):not([property]):hover:before {
-    content: "[";
-}
-
-nav a:not([class]):not([id]):not([property]):hover:after {
-    content: "]";
 }
