@@ -15,5 +15,7 @@ fetch(apiUrl).then(response => {
 		countryPlace + "<br>🌍 World place: " + ratingPlace;
 	document.getElementById('ratings').innerHTML = text;
 }).catch(err => {
-	document.getElementById('ratings').style.display = 'none';
+	const text = "🏆 Rating points: temporarily unavailable<br>🇮🇹 Country place: " +
+		"temporarily unavailable<br>🌍 World place: temporarily unavaliable";
+	document.getElementById('ratings').innerHTML = text;
 });
