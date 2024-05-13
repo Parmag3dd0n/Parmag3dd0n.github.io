@@ -1,4 +1,6 @@
-const apiUrl = 'https://ctftime.org/api/v1/teams/301277/';
+const ctftimeApiUrl = 'https://ctftime.org/api/v1/teams/301277/';
+const apiUrl = 'https://corsproxy.io/?' + encodeURIComponent(ctftimeApiUrl);
+
 fetch(apiUrl).then(response => {
 	return response.json();
 }).then(data => {
