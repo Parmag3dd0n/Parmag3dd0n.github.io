@@ -11,8 +11,8 @@ fetch(apiUrl).then(response => {
 	const countryPlace = rating.country_place;
 	const ratingPlace = rating.rating_place;
 	
-	const text = "Rating points: " + ratingPoints + "<br>Country place: " +
-		countryPlace + "<br>World place: " + ratingPlace;
+	const text = "🏆 Rating points: " + ratingPoints + "<br>🇮🇹 Country place: " +
+		countryPlace + "<br>🌍 World place: " + ratingPlace;
 	document.getElementById('ratings').innerHTML = text;
 }).catch(err => {
 	document.getElementById('ratings').style.display = 'none';
