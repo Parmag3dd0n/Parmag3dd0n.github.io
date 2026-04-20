@@ -7,4 +7,4 @@ Disallow: /resources/
 User-agent: GPTBot
 Disallow: /
 
-Sitemap: https://parmag3dd0n.com/sitemap.xml
+Sitemap: https://parmag3dd0n.github.io/sitemap.xml
